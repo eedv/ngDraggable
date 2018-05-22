@@ -122,6 +122,10 @@ angular.module("ngDraggable", [])
                         return;
                     }
 
+                    if(evt.target != element[0] && evt.target != _dragHandle[0]) {
+                        return;
+                    }
+
                     var useTouch = evt.type === 'touchstart' ? true : false;
 
 
